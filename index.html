@@ -20,43 +20,43 @@
                     <div class="row">
                         <div class="col">
                             <label for="bookTitle" class="form-label text-capitalize">title</label>
-                            <input type="text" name="bookTitle" id="bookTitle" class="form-control" value="">
+                            <input type="text" name="bookTitle" id="bookTitle" class="form-control" value="" required>
                         </div>
                         <div class="col">
                             <label for="bookAuthor" class="form-label text-capitalize">author</label>
-                            <input type="text" name="bookAuthor" id="bookAuthor" class="form-control" value="">
+                            <input type="text" name="bookAuthor" id="bookAuthor" class="form-control" value="" required>
                         </div>
                         <div class="col">
                             <label for="yrReleased" class="form-label text-capitalize">year released</label>
-                            <input type="number" name="yrReleased" id="yrReleased" class="form-control" min="1620" max="2025" value="">
+                            <input type="number" name="yrReleased" id="yrReleased" class="form-control" min="1620" max="2025" value="" required>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col">
                             <div class="form-check">
-                                <input type="radio" class="form-check-input" id="hardBack" name="bookFormat">
+                                <input type="radio" class="form-check-input" id="hardBack" name="bookFormat" value="hardBack">
                                 <label for="hardBack" class="form-check-label text-capitalize">hard-book</label>
                             </div>
                             <div class="form-check">
-                                <input type="radio" class="form-check-input" id="paperBack" name="bookFormat">
+                                <input type="radio" class="form-check-input" id="paperBack" name="bookFormat" value="paperBack">
                                 <label for="paperBack" class="form-check-label text-capitalize">paper-back</label>
                             </div>
                             <div class="form-check">
-                                <input type="radio" class="form-check-input" id="digital" name="bookFormat">
+                                <input type="radio" class="form-check-input" id="digital" name="bookFormat" value="digital">
                                 <label for="digital" class="form-check-label text-capitalize">digital</label>
                             </div>
                             <div class="form-check">
-                                <input type="radio" class="form-check-input" id="audio" name="bookFormat">
+                                <input type="radio" class="form-check-input" id="audio" name="bookFormat" value="audio">
                                 <label for="audio" class="form-check-label text-capitalize">audio</label>
                             </div>
                         </div>
                         <div class="col">
                             <div class="form-check">
-                                <input type="radio" class="form-check-input" id="fiction" name="category">
+                                <input type="radio" class="form-check-input" id="fiction" name="category" value="category">
                                 <label for="fiction" class="form-check-label text-capitalize">fiction</label>
                             </div>
                             <div class="form-check">
-                                <input type="radio" class="form-check-input" id="nonfiction" name="category">
+                                <input type="radio" class="form-check-input" id="nonfiction" name="category" value="nonfiction">
                                 <label for="nonfiction" class="form-check-label text-capitalize">non-fiction</label>
                             </div>
                         </div>
@@ -100,10 +100,14 @@
                                 <input type="checkbox" name="genre" class="form-check-input" id="classic" value="classic">
                                 <label for="classic" class="form-check-label">Classic</label>
                             </div>
+                            <div class="form-check">
+                                <input type="checkbox" name="genre" class="form-check-input" id="poetry" value="poetry">
+                                <label for="poetry" class="form-check-label">Poetry</label>
+                            </div>
                         </div>
                     </div>
                     <div class="mb-3">
-                        <button class="btn btn-danger text-capitalize" type="submit">submit</button>
+                        <button class="btn btn-danger text-capitalize" type="submit" id="submitBtn">submit</button>
                     </div>
             </div>
             </form>
@@ -111,7 +115,7 @@
         <section class="section" id="cardSection">
             <div class="container">
                 <h2 class="card-section-heading text-capitalize">book list</h2>
-                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4" id="cardRow"></div>
+                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4" id="cardRow"></div>
             </div>
         </section>
     </main>
